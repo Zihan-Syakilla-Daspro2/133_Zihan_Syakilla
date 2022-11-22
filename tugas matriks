@@ -1,0 +1,65 @@
+program penjumlahan_matriks (iput,output);
+uses crt;
+type
+    larik = array [1..10,1..10] of integer;
+var
+    matriks1,matriks2,hasil : larik;
+    jum,i,j,k : integer;
+begin
+    clrscr;
+    write('Masukkan matriks1 baris pertama kolom pertama : ');
+    readln(matriks1[1,1]);
+    write('Masukkan matriks1 baris pertama kolom kedua : ');
+    readln(matriks1[1,2]);
+    write('Masukkan matriks1 baris kedua kolom pertama : ');
+    readln(matriks1[2,1]);
+    write('Masukkan matriks1 baris kedua kolom kedua : ');
+    readln(matriks1[2,2]);
+    write('Masukkan matriks2 baris pertama kolom pertama : ');
+    readln(matriks2[1,1]);
+    write('Masukkan matriks2 baris pertama kolom kedua : ');
+    readln(matriks2[1,2]);
+    write('Masukkan matriks2 baris kedua kolom pertama : ');
+    readln(matriks2[2,1]);
+    write('Masukkan matriks2 baris kedua kolom kedua : ');
+    readln(matriks2[2,2]);
+    writeln;
+    writeln('Program penjumlahan matriks');
+    writeln;
+    writeln('Matriks pertama');
+    for i :=1 to 2 do
+    begin
+        for j := 1 to 2 do
+        begin
+            write(matriks1[i,j],' ');
+        end;
+        writeln;
+    end;
+    writeln('Matriks kedua');
+    for i :=1 to 2 do
+    begin
+        for j := 1 to 2 do
+        begin
+            write(matriks2[i,j],' ');
+        end;
+        writeln;
+    end;
+    for i := 1 to 2 do
+    begin
+        for j := 1 to 2 do
+        begin
+            hasil[i,j] := matriks1[i,j] + matriks2[i,j];
+        end;
+    end;
+    {proses hitung}
+    writeln('Hasil penjumlahan');
+    for i := 1 to 2 do
+    begin
+        for j := 1 to 2 do
+        begin
+            write(hasil[i,j],' ');
+        end;
+        writeln;
+    end;
+    readln;
+end.
